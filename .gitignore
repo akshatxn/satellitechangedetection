@@ -1,0 +1,27 @@
+# --- System & Python junk ---
+__pycache__/
+*.pyc
+.DS_Store
+.env
+venv/
+
+# --- STAGE 1: Data Alignment ---
+# Ignore the massive raw satellite images
+Stage1_Data_Alignment/raw_data/
+
+# --- STAGE 2: Model Training ---
+# Ignore the processed dataset (we can regenerate it using the script)
+Stage2_Model_Training/dataset/
+
+# --- STAGE 3: Inference ---
+# Ignore the output folder where test results are saved
+Stage3_Inference/final_predictions/
+
+# --- STAGE 4: Dashboard ---
+# Ignore the copy of the dataset used for the website
+Stage4_Dashboard/dataset/
+
+# --- LARGE FILES (Optional) ---
+# GitHub rejects files larger than 100MB. 
+# If your model file is huge, uncomment the line below to ignore it:
+# *.pth
